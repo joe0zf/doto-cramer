@@ -5,7 +5,7 @@ body{
 }
 .main-container{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('../img/fondo2.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -76,4 +76,71 @@ body{
     padding-bottom: 1.5em;
     margin-bottom: 1.5em;
     border-bottom: solid 3px tomato;
+}
+
+/*estilos para noticias*/
+
+.news-container{
+    margin-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.news-container_container{
+    width: 70%;
+}
+.news-title_container{
+    display: flex;
+}
+.news-title{
+    margin:0px;
+    color:white;
+    font-size: 0.9em;
+}
+.news-title_container a{
+    color:rgb(180, 175, 175);
+    text-decoration: none;
+    margin-left: 10px;
+}
+.news-items_container{
+    display: flex;
+    justify-content: space-between;
+}
+.news-item{
+    width: 30%;
+    height: 15em;
+    background-color: tomato;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-item img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color:white;
+    background-image: linear-gradient(0deg, black , rgba(0, 0, 0, 0.349));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: -50%;
+    transition: all 0.5s;
+}
+.news-item-date, .news-item-description{
+    color:#c5c5c5;
+    width: 90%;
+}
+.news-item-title{
+    width: 90%;
+}
+
+.news-item:hover .news-text{
+    bottom: 0%;
 }
